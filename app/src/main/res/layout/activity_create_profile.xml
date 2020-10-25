@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CreateProfileActivity">
+
+    <TextView
+        android:id="@+id/yourStory_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:maxLength="360"
+        android:text="Your Story: (0 of 360)"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/position_TextView"
+        app:layout_constraintTop_toBottomOf="@+id/position_TextView" />
+
+    <ImageView
+        android:id="@+id/profilePic_ImageView"
+        android:layout_width="200dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:onClick="setImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_photo" />
+
+    <EditText
+        android:id="@+id/selectUsName_TextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:hint="Select Username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profilePic_ImageView"
+        app:layout_constraintTop_toTopOf="@+id/profilePic_ImageView" />
+
+    <EditText
+        android:id="@+id/selectPass_EditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:hint="Select Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profilePic_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/selectUsName_TextView" />
+
+    <EditText
+        android:id="@+id/firstName_EditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:hint="Enter First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profilePic_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/adminUser_CheckBox" />
+
+    <EditText
+        android:id="@+id/lastName_EditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:hint="Enter Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profilePic_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/firstName_EditText" />
+
+    <EditText
+        android:id="@+id/department_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:hint="Enter Department"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastName_EditText" />
+
+    <EditText
+        android:id="@+id/position_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:hint="Enter your Position"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/department_EditText" />
+
+    <CheckBox
+        android:id="@+id/adminUser_CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Administrator User"
+        app:layout_constraintStart_toEndOf="@+id/profilePic_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/selectPass_EditText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/userDepartment_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Department: "
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/department_EditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/position_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Position: "
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/position_EditText"
+        app:layout_constraintStart_toStartOf="@+id/userDepartment_TextView" />
+
+    <EditText
+        android:id="@+id/description_EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha=".70"
+        android:background="#d4d4d4"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Tell us about yourself"
+        android:inputType="textMultiLine"
+        android:maxLength="360"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourStory_TextView"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
